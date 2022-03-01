@@ -8,3 +8,5 @@ Coding a web design I found on dribble.
 - How to make the rotating text around a circle thing
   [https://youtu.be/zwl3kZPZ8H8]
   On the above youtube tutorial they are rotating individual charaters, After I understood how that was done I managed to rotate words like I did "Hire us" on the site.
+
+Link to the website: [https://clintsayshi.github.io/weekend-challenge-taya/]
