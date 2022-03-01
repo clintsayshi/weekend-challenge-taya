@@ -1,0 +1,128 @@
+.default-circle {
+  position: relative;
+  max-width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: var(--color-second-bg);
+}
+
+@media (min-width: 1024px) {
+  .default-circle {
+    max-width: 250px;
+    height: 250px;
+  }
+}
+
+.rotating-circle-link {
+  display: block;
+  font-family: "poppins";
+  position: absolute;
+  inset: 0;
+  right: -50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 2px solid var(--color-text);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.rotating-circle-link .logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.rotating-circle-link .logo svg {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+@media (min-width: 1024px) {
+  .rotating-circle-link .logo {
+    width: 100px;
+    height: 100px;
+  }
+  .rotating-circle-link .logo svg {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+
+.rotating-circle-link-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: spin infinite 16s ease;
+          animation: spin infinite 16s ease;
+  padding: 10px;
+}
+
+.rotating-circle-link-text span {
+  position: absolute;
+  left: 40%;
+  font-size: 0.75rem;
+  -webkit-transform-origin: 20px 90px;
+          transform-origin: 20px 90px;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+@media (min-width: 1024px) {
+  .rotating-circle-link-text {
+    padding: 12px;
+  }
+  .rotating-circle-link-text span {
+    position: absolute;
+    left: 40%;
+    font-size: 0.85rem;
+    -webkit-transform-origin: center 110px;
+            transform-origin: center 110px;
+    text-transform: uppercase;
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+footer .rotating-circle-link {
+  border: 2px solid #fff;
+}
+
+footer .rotating-circle-link-text span {
+  color: #fff;
+}
+/*# sourceMappingURL=rotating-circle-link.css.map */
