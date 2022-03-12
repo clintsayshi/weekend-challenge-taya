@@ -133,6 +133,7 @@ button {
   font-family: "poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
   text-decoration: none;
+  color: var(--color-text);
 }
 
 .toggle-container {
@@ -522,8 +523,20 @@ Section Three
 .workflow-step {
   border-bottom: 2px solid var(--color-text);
   position: relative;
-
+  width: 100%;
   padding: 1rem 0;
+
+  /* &::after {
+    content: "";
+    position: absolute;
+    bottom: -2rem;
+    // left: -2px;
+    //right: -2px;
+    background: var(--color-text);
+    height: 2px;
+    //width: 100%;
+    transform: rotate(5deg);
+  } */
 
   &:nth-last-child(1) {
     border-bottom: none;
@@ -617,8 +630,6 @@ Section Three
 
 .action-buttons .btn {
   background: none;
-  padding: 0;
-  margin: 0;
   svg {
     width: 40px;
     height: 40px;
@@ -629,13 +640,14 @@ Section Three
 }
 
 .btn-up {
-  transform: rotate(-45deg);
+  svg {
+    transform: rotate(-45deg);
+  }
 }
 .btn-down {
-  transform: rotate(135deg);
-
   svg {
     background-color: #fff !important;
+    transform: rotate(135deg);
   }
 }
 
@@ -652,16 +664,16 @@ Section Three
 .client-feedback {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
   padding: 1rem 0;
   border-top: 2px solid #fff;
 }
 
 .client-feedback .feedback-text {
-  text-transform: uppercase;
+  text-transform: normal;
   font-size: 1rem;
   font-family: "poppins";
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.4;
 }
 
@@ -698,6 +710,10 @@ footer {
   padding: 2rem 0;
 
   @media (min-width: 600px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
   }
